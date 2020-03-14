@@ -1,0 +1,24 @@
+{:deps   {:aliases [:dev ]}
+ 
+
+ :builds {:worker {:target     :browser
+                   :output-dir "resources/public/js"
+                   :modules {:shared {:entries []}
+                             :worker {:entries [simple-workers.testworker]
+                                      :depends-on #{:shared}
+                                      :web-worker true}}
+                   :devtools {:browser-inject :test}
+                   
+                   }
+          :test   {:target    :browser-test
+                   :test-dir  "resources/public/"
+                   :ns-regexp "-spec$"
+                   :runner-ns simple-workers.test
+                   
+                   
+                   :devtools  {:browser-inject :test
+                               :after-load simple-workers.test/init
+                               :preloads       [devtools.preload]
+                               :http-port      8021
+                               :http-root      "resources/public/"}
+                   }}}

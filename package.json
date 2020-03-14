@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "deps": "yarn install",
+    "watch": "npx shadow-cljs watch worker test"
+  },
+  "dependencies": {
+    "shadow-cljs": "^2.8.92"
+  }
+}
