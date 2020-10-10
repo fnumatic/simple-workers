@@ -18,7 +18,6 @@
                    
                    :devtools  {:browser-inject :test
                                :after-load simple-workers.test/init
-                               :preloads       [devtools.preload]
                                :http-port      8021
                                :http-root      "resources/public/"}
                    }}}

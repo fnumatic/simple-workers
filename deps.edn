@@ -2,11 +2,10 @@
                                        :scope "provided"}
            org.clojure/clojurescript  {:mvn/version "RELEASE"
                                        :scope "provided"}
-           com.cognitect/transit-cljs {:mvn/version "0.8.256"}}
+           com.cognitect/transit-cljs {:mvn/version "0.8.264"}}
  
  :aliases {
-           :dev     {:extra-deps {thheller/shadow-cljs {:mvn/version "RELEASE"}
-                                  binaryage/devtools   {:mvn/version "RELEASE"}}}
+           :dev     {:extra-deps {thheller/shadow-cljs {:mvn/version "RELEASE"}}}
            },
  
  
